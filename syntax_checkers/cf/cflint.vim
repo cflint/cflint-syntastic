@@ -1,20 +1,20 @@
-if exists("g:loaded_syntastic_cfml_cflint_checker")
+if exists("g:loaded_syntastic_cf_cflint_checker")
 	finish
 endif
-let g:loaded_syntastic_cfml_cflint_checker = 1
+let g:loaded_syntastic_cf_cflint_checker = 1
 
-"if !exists('g:syntastic_cfml_sort')
-	"let g:syntastic_cfml_sort = 1
+"if !exists('g:syntastic_cf_sort')
+	"let g:syntastic_cf_sort = 1
 "endif
 
 let s:save_cpo = &cpo
 set cpo&vim
 
-function! SyntaxCheckers_cfml_IsAvailable() dict
+function! SyntaxCheckers_cf_IsAvailable() dict
 	return executable(self.getExec())
 endfunction
 
-"function! SyntaxCheckers_cfml_GetHighLightRegex(item)
+"function! SyntaxCheckers_cf_GetHighLightRegex(item)
 	"if match(a:item['text'], 'assigned but not unused variable') > -1
 		"let term = split(a:item['text'], ' - ')[1]
 		"return '\V\\<'.term.'\\>'
@@ -23,7 +23,7 @@ endfunction
 	"return ''
 "endfunction
 
-function! SyntaxCheckers_cfml_cflint_GetLocList() dict
+function! SyntaxCheckers_cf_cflint_GetLocList() dict
 	let makeprg = self.makeprgBuild({
 				\ 'args': '-file',
 				\ 'args_after': '-text' })
@@ -36,7 +36,7 @@ function! SyntaxCheckers_cfml_cflint_GetLocList() dict
 endfunction
 
 call g:SyntasticRegistry.CreateAndRegisterChecker({
-			\ 'filetype': 'cfml',
+			\ 'filetype': 'cf',
 			\ 'name': 'cflint' })
 
 let &cpo = s:save_cpo
