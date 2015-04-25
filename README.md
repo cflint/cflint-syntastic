@@ -1,6 +1,5 @@
 The beginnings of a cflint syntastic script.
 
-In .vimrc, add `let g:syntastic_cfml_checkers=['cflint']`
 
 ## Install
 
@@ -20,3 +19,6 @@ add the appropriate lines and execute the plugin's install command.
 
 Please make sure `cflint` is [installed](https://github.com/cflint/CFLint/blob/master/build-instructions.md)
 and in the PATH.
+
+## Disable
+In .vimrc, add `let g:syntastic_cf_checkers=[]`
