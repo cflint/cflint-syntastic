@@ -22,3 +22,6 @@ and in the PATH.
 
 ## Disable
 In .vimrc, add `let g:syntastic_cf_checkers=[]`
+
+## Other
+Added support for use with [cf-utils](https://github.com/davejlong/cf-utils.vim)
