@@ -1,10 +1,11 @@
-The beginnings of a cflint syntastic script.
+A [cflint](https://github.com/cflint/CFLint) [vim-syntastic](https://github.com/vim-syntastic/syntastic) script.
 
 
 ## Install
 
 cflint-syntastic follows the standard runtime path structure.  Using
 a common and well known plugin manager to install cflint-syntastic is recommended.
+
 For Pathogen just clone the repo, for other plugin managers
 add the appropriate lines and execute the plugin's install command.
 
